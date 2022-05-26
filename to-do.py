@@ -60,10 +60,10 @@ def list():
                     print(Fore.RED + Style.BRIGHT + f'{row[0]}' + '  -->    ' + f'{row[2]}' + Style.RESET_ALL)
                 
                 elif int(row[3]) == 2:
-                    print(Fore.GREEN + Style.BRIGHT + f'{row[0]}' + '  -->    ' + f'{row[2]}' + Style.RESET_ALL)
+                    print(Fore.YELLOW + Style.BRIGHT + f'{row[0]}' + '  -->    ' + f'{row[2]}' + Style.RESET_ALL)
 
                 elif int(row[3]) == 3:
-                    print(Fore.BLUE + Style.BRIGHT + f'{row[0]}' + '  -->    ' + f'{row[2]}' + Style.RESET_ALL)
+                    print(Fore.GREEN + Style.BRIGHT + f'{row[0]}' + '  -->    ' + f'{row[2]}' + Style.RESET_ALL)
 
                 else:
                     print(f'\n-->   ' + row[2])
