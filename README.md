@@ -5,7 +5,7 @@ The code, on line 15, creates a variable called 'paths'. This is the path of the
 
 I also recomend to add this program ini your /bin directory to make it executable from any directory you are.
 
-## Intall:
+## Installation
 ### Install the necessary dependencies
 ```bash
 pip install colorama optparse-pretty python-csv pandas
