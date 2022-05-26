@@ -8,7 +8,7 @@ I also recomend to add this program ini your /bin directory to make it executabl
 ##Intall:
 ###Install the necessary dependencies
 ```bash
-pip install colorama optparse csv pandas
+pip install colorama optparse-pretty python-csv pandas
 ```
 ###Download the repository and copy the the file to the /bin
 ```bash
