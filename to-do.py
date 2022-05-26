@@ -1,16 +1,12 @@
 #!/bin/python3
 
-from cgi import print_arguments
-import colorama
 import os
 from colorama import Fore
 from colorama import Style
 import optparse
-import re 
 import csv
 import time
 import pandas as pd
-from requests import options
 
 paths = str(os.environ['HOME']) + '/.Todo'
 
@@ -147,7 +143,7 @@ def get_arguments():
 
     parser.add_option("-a", '--add', action="store_true", dest="add")
     parser.add_option("-m", '--markasdone', action="store_true", dest="markasdone")
-    parser.add_option("-l", "--list", action="store_true", dest="list", help='Mustra todas las tareas las no completadas.')
+    parser.add_option("-l", "--list", action="store_true", dest="list", help='Mustra todas las tareas completadas y no completadas.')
 
     (options, args) = parser.parse_args()
 
@@ -161,6 +157,10 @@ def get_arguments():
     return options
 
 try:
+    what_to_do(get_arguments())
+
+except FileNotFoundError:
+    open(paths, 'a').close()
     what_to_do(get_arguments())
 
 except KeyboardInterrupt:
